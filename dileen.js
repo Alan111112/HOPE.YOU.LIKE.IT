@@ -1545,7 +1545,7 @@ button.addEventListener('click', () => {
             
         textMassege.innerHTML = "ahhhh, i mean you know what i will tell my friend<br> to come and talk to you"
         button.removeEventListener('click', handleClick); 
-        button.addEventListener('click', () => {window.location.href = 'HOPE.YOU.LIKE.IT/game-end/index.html'});
+        button.addEventListener('click', () => {window.location.href = 'https://alan111112.github.io/HOPE.YOU.LIKE.IT/game-end/index.html'});
     }
 });
 
