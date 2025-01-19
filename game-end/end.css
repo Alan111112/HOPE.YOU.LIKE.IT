@@ -1,0 +1,107 @@
+:root{
+    --background-color: hsl(0, 0%, 100%);
+    --active-btn: hsl(0, 0%, 86%);
+    --box-shadow: 0px 10px 15px black;
+    --transition-1: all .1s;
+    --hover-pointer: pointer;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url(c-removebg-preview.png);
+    background-size: 100px;
+    backdrop-filter: blur(3px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes colorChange {
+    0% { background-color: red; }
+    25% { background-color: blue; }
+    50% { background-color: green; }
+    75% { background-color: yellow; }
+    100% { background-color: red; } /* Loop back to the first color */
+}
+.disco {
+    min-height: 100vh;
+    padding: 6rem;
+    color: white;
+    font-size: 2rem;
+    width: 60.25rem;
+    text-align: center;
+    animation: colorChange 1.5s infinite; /* Loop animation every 1 second */
+}
+.cat-dance {
+    animation: dance 1s infinite;
+} 
+@keyframes dance {
+    0%, 100% {
+        transform: scaleX(1); /* Normal orientation */
+    }
+    50% {
+        transform: scaleX(-1); /* Flipped horizontally */
+    }
+}
+
+
+/* section number two */
+
+.sec-2 {
+    min-height: 100vh;
+    width: 60.25rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    gap: 3rem;
+}
+.dont-click {
+    margin-top: 70px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--background-color);
+    color: white;
+    box-shadow: 5px 10px 15px -15px rgb(0, 0, 0),
+                -5px 10px 15px -15px rgb(0, 0, 0)
+    ;
+    transition: var(--transition-1);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: var(--hover-pointer);
+}
+.dont-click:active{
+    transform: translateY(5px);
+    background-color: var(--active-btn);
+    box-shadow: unset;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 3rem;
+    gap: 2rem;
+}
+.card img {
+    height: 220px;
+    width: 150px;
+}
+.text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
